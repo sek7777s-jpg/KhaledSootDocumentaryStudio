@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - 'KhaledSoot_DocumentaryStudio_v1.zip'
+      - 'KhaledSoot_DocumentaryStudio_v1_FIXED.zip'
       - '.github/workflows/build-documentary-apk.yml'
 
 jobs:
@@ -37,7 +37,7 @@ jobs:
       - name: Extract Android project
         run: |
           mkdir -p project
-          unzip -o KhaledSoot_DocumentaryStudio_v1.zip -d project
+          unzip -o KhaledSoot_DocumentaryStudio_v1_FIXED.zip -d project
 
       - name: Build debug APK
         run: gradle --no-daemon assembleDebug
